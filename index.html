@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteganoCrypt - Advanced Image Steganography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 SteganoCrypt</h1>
+            <p class="subtitle">Image Steganography Tool</p>
+        </header>
+
+        <div class="mode-switcher">
+            <button class="mode-btn active" onclick="switchMode('encode')">🔐 Hide Message</button>
+            <button class="mode-btn" onclick="switchMode('decode')">👁️ Reveal Message</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- Encode Tab -->
+            <div id="encode-tab" class="tab active">
+                <h2 style="margin-bottom: 20px; color: #667eea;">Hide Secret Message in Image</h2>
+                
+                <div class="form-group">
+                    <label>Select Cover Image (PNG/JPG)</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="cover-image" class="file-input" accept=".png,.jpg,.jpeg" onchange="handleCoverImage(this)">
+                        <div class="file-input-button" id="cover-button">
+                            📁 Choose Image File
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-area" id="cover-preview">
+                    <img id="cover-img" class="preview-image" alt="Cover Image Preview">
+                </div>
+
+                <div class="form-group">
+                    <label>Secret Message</label>
+                    <textarea id="secret-message" placeholder="Enter your secret message here..." maxlength="500"></textarea>
+                    <small style="color: #666;">Maximum 500 characters</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Password (Optional)</label>
+                    <input type="password" id="encode-password" placeholder="Enter password for extra security">
+                </div>
+
+                <button class="btn" onclick="encodeMessage()" id="encode-btn">🔒 Hide Message in Image</button>
+                
+                <div id="encode-result" class="result-area" style="display: none;">
+                    <h3>✅ Message Hidden Successfully!</h3>
+                    <p>Your secret message has been embedded in the image.</p>
+                    <button class="btn download-btn" onclick="downloadImage()">💾 Download Encoded Image</button>
+                </div>
+            </div>
+
+            <!-- Decode Tab -->
+            <div id="decode-tab" class="tab">
+                <h2 style="margin-bottom: 20px; color: #667eea;">Reveal Hidden Message</h2>
+                
+                <div class="form-group">
+                    <label>Select Encoded Image</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="encoded-image" class="file-input" accept=".png,.jpg,.jpeg" onchange="handleEncodedImage(this)">
+                        <div class="file-input-button" id="encoded-button">
+                            📁 Choose Encoded Image
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-area" id="encoded-preview">
+                    <img id="encoded-img" class="preview-image" alt="Encoded Image Preview">
+                </div>
+
+                <div class="form-group">
+                    <label>Password (if used during encoding)</label>
+                    <input type="password" id="decode-password" placeholder="Enter password if you used one">
+                </div>
+
+                <button class="btn" onclick="decodeMessage()" id="decode-btn">👁️ Reveal Hidden Message</button>
+                
+                <div id="decode-result" class="result-area" style="display: none;">
+                    <h3>Hidden Message:</h3>
+                    <div id="decoded-message" style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px; word-wrap: break-word;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Secure Encoding</h3>
+                <p>Uses LSB steganography with optional password protection</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖼️</div>
+                <h3>Multiple Formats</h3>
+                <p>Supports PNG, JPG, and JPEG image formats</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Processing</h3>
+                <p>Quick encoding and decoding with real-time preview</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>No Quality Loss</h3>
+                <p>Invisible changes that preserve image quality</p>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
