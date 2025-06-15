@@ -34,7 +34,7 @@ A modern, web-based steganography application that allows you to hide secret mes
 
 ## 🚀 Demo
 
-**[Try SteganoCrypt Live](https://your-username.github.io/steganocrypt)**
+**[Try SteganoCrypt Live](https://vishnupchopra.github.io/SteganoCrypt/)**
 
 ## 📋 How It Works
 
@@ -61,15 +61,13 @@ A modern, web-based steganography application that allows you to hide secret mes
 ### Option 2: Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/steganocrypt.git
+git clone https://github.com/vishnupchopra/SteganoCrypt.git
 
 # Navigate to project directory
 cd steganocrypt
 
 # Open in browser
 open index.html
-# or
-python -m http.server 8000  # For local server
 ```
 
 ### Option 3: GitHub Pages
@@ -154,48 +152,17 @@ Contributions are welcome! Here's how you can help:
 - [ ] Mobile app version
 - [ ] Browser extension
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 [Your Name]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
 ## 🌟 Acknowledgments
 
 - Inspired by classic steganography techniques and modern web development practices
 - Built with love for the cybersecurity and privacy community
-- Thanks to all contributors and users who provide feedback and improvements
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/steganocrypt/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/steganocrypt/discussions)
-- **Email**: your-email@example.com
+- **Email**: vishnuchopra58@gmail.com
 
 ---
 
 **⭐ If you find SteganoCrypt useful, please consider starring the repository!**
 
-Made with ❤️ by [Your Name](https://github.com/your-username)
+Made with ❤️ by [Vishnu Chopra](https://github.com/vishnupchopra/SteganoCrypt)
